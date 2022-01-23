@@ -47,6 +47,10 @@ public class Unidade {
 	@JoinColumn(name = "condominio_id")
 	private Condominio condominio;
 
+	@OneToOne
+	@JoinColumn(name = "inquilino_id")
+	private Inquilino inquilino;
+
 	public Unidade() {
 	}
 
@@ -128,5 +132,13 @@ public class Unidade {
 
 	public void setCondominio(Condominio condominio) {
 		this.condominio = condominio;
+	}
+
+	public Inquilino getInquilino() {
+		return inquilino;
+	}
+
+	public void setInquilino(Inquilino inquilino) {
+		this.inquilino = inquilino;
 	}
 }
